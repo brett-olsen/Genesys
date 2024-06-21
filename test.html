@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Boilerplate</title>
+    <link rel="stylesheet" href="style.css">
+    
+     <script type="text/javascript" charset="utf-8">
+(function (g, e, n, es, ys) {
+    g['_genesysJs'] = e;
+    g[e] = g[e] || function () {
+      (g[e].q = g[e].q || []).push(arguments)
+    };
+    g[e].t = 1 * new Date();
+    g[e].c = es;
+    ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
+  })(window, 'Genesys', 'https://apps.mypurecloud.com.au/genesys-bootstrap/genesys.min.js', {
+    environment: 'prod-apse2',
+    deploymentId: 'd03646eb-8331-40a1-b621-4f26e4a6f849'
+  });
+
+Genesys("command", "Database.set", {
+  messaging: {
+              customAttributes: {
+                    PracticeID: "Sample_PracticeID",
+                    Name: "Sample_Name",
+                    Email: "Sample_Email"
+              }
+  }
+});
+</script> 
+    
+  </head>
+  <body>
+  Genesys Test Widget Page
+	<script src="index.js"></script>
+  </body>
+</html>
